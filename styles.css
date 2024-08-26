@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header styling */
+#header {
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bld;
+}
+
+.search-container {
+  margin-top: 10px;
+}
+
+#cityInput {
+  padding: 8px;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+#searchButton {
+  padding: 8px;
+  background-color: #ef4444;
+  color: white;
+  border: 1px solid #ef4444;
+  border-radius: 0 4px 4px 0;
+}
+
+#searchButton:hover {
+  background-color: #dc2626;
+}
+
+/* Main content styling */
+#main-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card styling */
+#weather-card {
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.weather-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* controls */
+.controls {
+  margin: 16px 0;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #1d4ed8;
+}
+
+.controls button:active {
+  background-color: #1e40af;
+}
+
+/* forecast */
+#forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+.forecast-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+/* footer */
+#footer {
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+}
+
+/* responsive */
+@media (min-width: 1024px) {
+  #forecast-container {
+    flex-direction: row;
+  }
+  .forecast-card {
+    width: calc(33.333% - 16px);
+  }
+}
+
+@media (min-width: 768) and (max-width: 1024) {
+  #forecast-container {
+    flex-direction: row;
+  }
+  .forecast-card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 767px) {
+  #forecast-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .forecast-card {
+    width: 100%;
+  }
+}
